@@ -1,0 +1,61 @@
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+ 
+local Name1 = Library:NewWindow("ShootBeamSim")
+ 
+local Name1 = Name1:NewSection("Main")
+
+local Name2= Name2:NewSection("Teleport")
+
+Name1:CreateButton("Spins", function(value)
+for i = 1, 5 do
+local args = {
+    [1] = "Spins",
+    [2] = 10000
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AddValue"):FireServer(unpack(args))
+end
+end)
+
+Name1:CreateButton("Power", function(value)
+for i = 1, 200 do
+game:GetService("ReplicatedStorage"):WaitForChild("Power"):WaitForChild("GivePower"):FireServer()
+end
+end)
+
+Name1:CreateButton("Wins", function(value)
+for i = 1, 20 do
+local args = {
+    [1] = "Wins",
+    [2] = 50000
+}
+
+game:GetService("ReplicatedStorage").Boosts.PlaytimeReward:FireServer(unpack(args))
+end
+end)
+Name1:CreateButton("OP Pets", function()
+for i = 1, 5 do
+local args = {
+    [1] = {
+        [1] = "Frost Spirit",
+        [2] = false,
+        [3] = "Baby",
+        [4] = "1706286209151060"
+    },
+    [2] = "Pets",
+    [3] = "Epic Frost",
+    [4] = 3,
+    [6] = false
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AddValueToTable"):FireServer(unpack(args))
+end
+end)
+
+Name1:CreateButton("OP Pets", function()
+local args = {
+    [1] = "Candy"
+}
+
+game:GetService("ReplicatedStorage").Other.TeleportPlayer:FireServer(unpack(args))
+end)
