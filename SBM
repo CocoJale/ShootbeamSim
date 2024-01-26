@@ -4,7 +4,7 @@ local Name1 = Library:NewWindow("ShootBeamSim")
  
 local Name1 = Name1:NewSection("Main")
 
-local Name1 = Name1:NewSection("Teleport")
+local Name1 = Name1:CreateSection("Teleport")
 
 Name1:CreateButton("Spins", function(value)
 for i = 1, 5 do
